@@ -1,0 +1,11 @@
+Django
+djangorestframework
+python-dotenv
+langchain-anthropic
+langchain-huggingface
+langchain-chroma
+langchain-text-splitters
+langchain-community
+langgraph
+streamlit
+requests

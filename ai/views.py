@@ -8,7 +8,7 @@ from rest_framework.authtoken.models import Token
 from rest_framework.permissions import AllowAny
 from rest_framework.pagination import PageNumberPagination
 
-from langchain_openai import ChatOpenAI
+from langchain_anthropic import ChatAnthropic
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -28,9 +28,9 @@ from .serializers import (
 
 
 def get_llm():
-    return ChatOpenAI(
-        api_key=settings.OPENAI_API_KEY,
-        model='gpt-4o-mini',
+    return ChatAnthropic(
+        api_key=settings.ANTHROPIC_API_KEY,
+        model=settings.ANTHROPIC_MODEL,
         temperature=0.7,
     )
 

@@ -145,6 +145,7 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
 }
 
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY')
+ANTHROPIC_MODEL = os.getenv('ANTHROPIC_MODEL', 'claude-sonnet-4-5')
 CHROMA_DB_PATH = os.path.join(BASE_DIR, 'chroma_db')
 TEMP_UPLOAD_PATH = os.path.join(BASE_DIR, 'temp_uploads')
